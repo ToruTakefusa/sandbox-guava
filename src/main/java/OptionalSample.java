@@ -1,4 +1,8 @@
 import com.google.common.base.Optional;
+import com.sun.java.accessibility.util.TopLevelWindowListener;
+
+import javax.swing.text.html.Option;
+
 public class OptionalSample {
     public Optional optionalOfNull() {
         return Optional.of(null);
@@ -46,5 +50,43 @@ public class OptionalSample {
 
     public Object getAbsent() {
         return Optional.absent().get();
+    }
+
+    public int orInt() {
+        return Optional.of(0).or(1);
+    }
+
+    public int orIntDefaultValue() {
+        Optional<Integer> optional = Optional.fromNullable(null);
+        return optional.or(5);
+    }
+
+    public double orDouble() {
+        return Optional.of(3.14).or(0.15);
+    }
+
+    public double orDoubleDefaultValue() {
+        Optional<Double> optional = Optional.fromNullable(null);
+        return optional.or(3.14);
+    }
+
+    public Number orNumber() {
+        Optional<Number> optional = Optional.of(0);
+        return optional.or(3.14);
+    }
+
+    public Number orNumberDefaultValue() {
+        Optional<Number> optional = Optional.fromNullable(null);
+        return optional.or(3.14);
+    }
+
+    public String orString() {
+        Optional<String> optional = Optional.of("abc");
+        return optional.or("");
+    }
+
+    public String orStringDefaultValue() {
+        Optional<String> optional = Optional.fromNullable(null);
+        return optional.or("");
     }
 }

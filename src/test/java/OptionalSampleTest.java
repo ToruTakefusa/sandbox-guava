@@ -72,4 +72,44 @@ class OptionalSampleTest {
     void getAbsent() {
         assertThrows(IllegalStateException.class, ()->optionalSample.getAbsent());
     }
+
+    @Test
+    void orInt() {
+        assertEquals(optionalSample.orInt(), 0);
+    }
+
+    @Test
+    void orIntDefaultValue() {
+        assertEquals(optionalSample.orIntDefaultValue(), 5);
+    }
+
+    @Test
+    void orDouble() {
+        assertEquals(optionalSample.orDouble(), 3.14, 0.001);
+    }
+
+    @Test
+    void orDoubleDefaultValue() {
+        assertEquals(optionalSample.orDoubleDefaultValue(), 3.14, 0.001);
+    }
+
+    @Test
+    void orNumber() {
+        assertEquals(optionalSample.orNumber(), 0);
+    }
+
+    @Test
+    void orNumberDefaultValue() {
+        assertEquals(optionalSample.orNumberDefaultValue(), 3.14);
+    }
+
+    @Test
+    void orString() {
+        assertEquals(optionalSample.orString(), "abc");
+    }
+
+    @Test
+    void orStringDefaultValue() {
+        assertEquals(optionalSample.orStringDefaultValue(), "");
+    }
 }
