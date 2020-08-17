@@ -1,7 +1,4 @@
 import com.google.common.base.Optional;
-import com.sun.java.accessibility.util.TopLevelWindowListener;
-
-import javax.swing.text.html.Option;
 
 /**
  * Sandbox of Optional.
