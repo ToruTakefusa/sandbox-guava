@@ -1,5 +1,7 @@
 import com.google.common.base.Optional;
 
+import java.util.Set;
+
 /**
  * Sandbox of Optional.
  */
@@ -170,48 +172,85 @@ public class OptionalSample {
         return optional.or("");
     }
 
+    /**
+     * Optional.of(int).orNull return int.
+     * @return
+     */
     public int orNullInt() {
         Optional<Integer> optional = Optional.of(1);
         return optional.orNull();
     }
 
+    /**
+     * Optional.absent().orNull() return null.
+     * @return
+     */
     public Integer orNullIntAbsent() {
         Optional<Integer> optional = Optional.absent();
         return optional.orNull();
     }
 
+    /**
+     * Optional.fromNullable(null).orNull() return null;
+     * @return
+     */
     public Integer orNullIntNull() {
         Optional<Integer> optional = Optional.fromNullable(null);
         return optional.orNull();
     }
 
+    /**
+     * Optional.of(double).orNull() return double.
+     * @return
+     */
     public double orNullDouble() {
         Optional<Double> optional = Optional.of(3.14);
         return optional.orNull();
     }
 
+    /**
+     * Optional.absent().orNull() return null.
+     * @return
+     */
     public Double orNullDoubleAbsent() {
         Optional<Double> optional = Optional.absent();
         return optional.orNull();
     }
 
+    /**
+     * Optional.fromNullable(null) return null.
+     * @return
+     */
     public Double orNullDoubleNull() {
         Optional<Double> optional = Optional.fromNullable(null);
         return optional.orNull();
     }
 
+    /**
+     * Optional.of(String).orNull return String.
+     * @return
+     */
     public String orNullString() {
         Optional<String> optional = Optional.of("");
         return optional.orNull();
     }
 
+    /**
+     * Optional.absent().orNull return null.
+     * @return
+     */
     public String orNullStringAbsent() {
         Optional<String> optional = Optional.absent();
         return optional.orNull();
     }
 
+    /**
+     * Optional.fromNullable(null).orNull return null
+     * @return
+     */
     public String orNullStringNull() {
         Optional<String> optional = Optional.fromNullable(null);
         return optional.orNull();
     }
+
 }
