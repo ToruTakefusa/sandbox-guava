@@ -169,4 +169,49 @@ public class OptionalSample {
         Optional<String> optional = Optional.fromNullable(null);
         return optional.or("");
     }
+
+    public int orNullInt() {
+        Optional<Integer> optional = Optional.of(1);
+        return optional.orNull();
+    }
+
+    public Integer orNullIntAbsent() {
+        Optional<Integer> optional = Optional.absent();
+        return optional.orNull();
+    }
+
+    public Integer orNullIntNull() {
+        Optional<Integer> optional = Optional.fromNullable(null);
+        return optional.orNull();
+    }
+
+    public double orNullDouble() {
+        Optional<Double> optional = Optional.of(3.14);
+        return optional.orNull();
+    }
+
+    public Double orNullDoubleAbsent() {
+        Optional<Double> optional = Optional.absent();
+        return optional.orNull();
+    }
+
+    public Double orNullDoubleNull() {
+        Optional<Double> optional = Optional.fromNullable(null);
+        return optional.orNull();
+    }
+
+    public String orNullString() {
+        Optional<String> optional = Optional.of("");
+        return optional.orNull();
+    }
+
+    public String orNullStringAbsent() {
+        Optional<String> optional = Optional.absent();
+        return optional.orNull();
+    }
+
+    public String orNullStringNull() {
+        Optional<String> optional = Optional.fromNullable(null);
+        return optional.orNull();
+    }
 }

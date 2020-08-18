@@ -109,4 +109,49 @@ class OptionalSampleTest {
     void orStringDefaultValue() {
         assertEquals(optionalSample.orStringDefaultValue(), "");
     }
+
+    @Test
+    void orNullInt() {
+        assertEquals(optionalSample.orNullInt(), 1);
+    }
+
+    @Test
+    void orNullIntAbsent() {
+        assertNull(optionalSample.orNullIntAbsent());
+    }
+
+    @Test
+    void orNullIntNull() {
+        assertNull(optionalSample.orNullIntNull());
+    }
+
+    @Test
+    void orNullDouble() {
+        assertEquals(optionalSample.orNullDouble(), 3.14, 0.001);
+    }
+
+    @Test
+    void orNullDoubleAbsent() {
+        assertNull(optionalSample.orNullDoubleAbsent());
+    }
+
+    @Test
+    void orNullDoubleNull() {
+        assertNull(optionalSample.orNullDoubleNull());
+    }
+
+    @Test
+    void orNullString() {
+        assertEquals(optionalSample.orNullString(), "");
+    }
+
+    @Test
+    void orNullStringAbsent() {
+        assertNull(optionalSample.orNullStringAbsent());
+    }
+
+    @Test
+    void orNullStringNull() {
+        assertNull(optionalSample.orNullStringNull());
+    }
 }
