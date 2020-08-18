@@ -3,12 +3,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class OptionalSampleTest {
-    OptionalSample optionalSample;
-
-    @BeforeEach
-    void setUp() {
-        optionalSample = new OptionalSample();
-    }
+    OptionalSample optionalSample = new OptionalSample();
 
     @Test
     void optionalOfNull() {
