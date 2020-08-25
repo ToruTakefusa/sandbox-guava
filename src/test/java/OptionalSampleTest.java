@@ -1,5 +1,9 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.util.Iterator;
+import java.util.Set;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class OptionalSampleTest {
@@ -148,5 +152,40 @@ class OptionalSampleTest {
     @Test
     void orNullStringNull() {
         assertNull(optionalSample.orNullStringNull());
+    }
+
+    @Test
+    void asSetInteger() {
+        Set<Integer> sets = optionalSample.asSetInteger();
+        assertEquals(sets.size(), 1);
+
+        for (int value : sets) {
+            assertEquals(value, 1);
+        }
+    }
+
+    @Test
+    void asSetDouble() {
+        Set<Double> sets = optionalSample.asSetDouble();
+        assertEquals(sets.size(), 1);
+
+        for (double value : sets) {
+            assertEquals(value, 3.14);
+        }
+    }
+
+    @Test
+    void asSetString() {
+        Set<String> sets = optionalSample.asSetString();
+        assertEquals(sets.size(), 1);
+
+        for (String value : sets) {
+            assertEquals( "", value);
+        }
+    }
+
+    @Test
+    void asSetNull() {
+        assertEquals(0, optionalSample.asSetNull().size());
     }
 }

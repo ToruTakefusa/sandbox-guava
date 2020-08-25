@@ -253,4 +253,20 @@ public class OptionalSample {
         return optional.orNull();
     }
 
+    public Set asSetInteger() {
+        return Optional.of(1).asSet();
+    }
+
+    public Set asSetDouble() {
+        return Optional.of(3.14).asSet();
+    }
+
+    public Set asSetString() {
+        return Optional.of("").asSet();
+    }
+
+    public Set asSetNull() {
+        return Optional.fromNullable(null).asSet();
+    }
+
 }
