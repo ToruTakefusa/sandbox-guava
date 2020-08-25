@@ -38,22 +38,22 @@ class OptionalSampleTest {
 
     @Test
     void getString() {
-        assertEquals(optionalSample.getString(), "foo");
+        assertEquals("foo", optionalSample.getString());
     }
 
     @Test
     void getEmptyString() {
-        assertEquals(optionalSample.getEmptyString(), "");
+        assertEquals("", optionalSample.getEmptyString());
     }
 
     @Test
     void getInt() {
-        assertEquals(optionalSample.getInt(), 1);
+        assertEquals(1, optionalSample.getInt());
     }
 
     @Test
     void getDouble() {
-        assertEquals(optionalSample.getDouble(), 3.14, 0.0001);
+        assertEquals(3.14, optionalSample.getDouble(), 0.0001);
     }
 
     @Test
@@ -68,47 +68,47 @@ class OptionalSampleTest {
 
     @Test
     void orInt() {
-        assertEquals(optionalSample.orInt(), 0);
+        assertEquals(0, optionalSample.orInt());
     }
 
     @Test
     void orIntDefaultValue() {
-        assertEquals(optionalSample.orIntDefaultValue(), 5);
+        assertEquals(5, optionalSample.orIntDefaultValue());
     }
 
     @Test
     void orDouble() {
-        assertEquals(optionalSample.orDouble(), 3.14, 0.001);
+        assertEquals(3.14, optionalSample.orDouble(), 0.001);
     }
 
     @Test
     void orDoubleDefaultValue() {
-        assertEquals(optionalSample.orDoubleDefaultValue(), 3.14, 0.001);
+        assertEquals(3.14, optionalSample.orDoubleDefaultValue(), 0.001);
     }
 
     @Test
     void orNumber() {
-        assertEquals(optionalSample.orNumber(), 0);
+        assertEquals(0, optionalSample.orNumber());
     }
 
     @Test
     void orNumberDefaultValue() {
-        assertEquals(optionalSample.orNumberDefaultValue(), 3.14);
+        assertEquals(3.14, optionalSample.orNumberDefaultValue());
     }
 
     @Test
     void orString() {
-        assertEquals(optionalSample.orString(), "abc");
+        assertEquals("abc", optionalSample.orString());
     }
 
     @Test
     void orStringDefaultValue() {
-        assertEquals(optionalSample.orStringDefaultValue(), "");
+        assertEquals("", optionalSample.orStringDefaultValue());
     }
 
     @Test
     void orNullInt() {
-        assertEquals(optionalSample.orNullInt(), 1);
+        assertEquals(1, optionalSample.orNullInt());
     }
 
     @Test
@@ -123,7 +123,7 @@ class OptionalSampleTest {
 
     @Test
     void orNullDouble() {
-        assertEquals(optionalSample.orNullDouble(), 3.14, 0.001);
+        assertEquals(3.14, optionalSample.orNullDouble(), 0.001);
     }
 
     @Test
@@ -138,7 +138,7 @@ class OptionalSampleTest {
 
     @Test
     void orNullString() {
-        assertEquals(optionalSample.orNullString(), "");
+        assertEquals("", optionalSample.orNullString());
     }
 
     @Test
@@ -154,27 +154,27 @@ class OptionalSampleTest {
     @Test
     void asSetInteger() {
         Set<Integer> sets = optionalSample.asSetInteger();
-        assertEquals(sets.size(), 1);
+        assertEquals(1, sets.size());
 
         for (int value : sets) {
-            assertEquals(value, 1);
+            assertEquals(1, value);
         }
     }
 
     @Test
     void asSetDouble() {
         Set<Double> sets = optionalSample.asSetDouble();
-        assertEquals(sets.size(), 1);
+        assertEquals(1, sets.size());
 
         for (double value : sets) {
-            assertEquals(value, 3.14);
+            assertEquals(3.14, value, 0.001);
         }
     }
 
     @Test
     void asSetString() {
         Set<String> sets = optionalSample.asSetString();
-        assertEquals(sets.size(), 1);
+        assertEquals(1, sets.size());
 
         for (String value : sets) {
             assertEquals( "", value);
